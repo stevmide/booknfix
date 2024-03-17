@@ -4,29 +4,28 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 function infoForm() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [info, setInfo] = useState('');
+  const router = useRouter();
 
-        const [name, setName] = useState('');
-        const [email, setEmail] = useState('');
-        const [phone, setPhone] = useState('');
-        const [info, setInfo] = useState('');
-        const router = useRouter();
-      
-        const handleSubmit = async (e) => {
-          e.preventDefault();
-      
-          // Simulate sending data to server (replace with your API call)
-          const response = await fetch('/api/submit-user-info', {
-            method: 'POST',
-            body: JSON.stringify({ name, email }),
-          });
-      
-          if (response.ok) {
-            // Redirect to confirmation page after successful submission
-            router.push('/confirmation');
-          } else {
-            console.error('Error submitting user information:', await response.text());
-          }
-        };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Simulate sending data to server (replace with your API call)
+    const response = await fetch('/api/submit-user-info', {
+      method: 'POST',
+      body: JSON.stringify({ name, email }),
+    });
+
+    if (response.ok) {
+      // Redirect to confirmation page after successful submission
+      router.push('/confirmation');
+    } else {
+      console.error('Error submitting user information:', await response.text());
+    }
+  };
   return (
     <div className="flex justify-between">
         <div className="w-1/2">

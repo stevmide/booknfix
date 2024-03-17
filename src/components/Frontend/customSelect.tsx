@@ -4,8 +4,8 @@ import Head from 'next/head';
 import Image from "next/image";
 
 function customSelect() {
-
-    const router = useRouter();
+  const router = useRouter();
+  
   const [selectedService, setSelectedService] = useState('');
   const [selectedTypeOfService, setSelectedTypeOfService] = useState('');
   const [typesOfService, setTypesOfService] = useState([]);
