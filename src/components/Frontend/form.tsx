@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import CustomSelect from './customSelect';
+// import React, { useState } from 'react';
+// import CustomSelect from './customSelect';
 
 
 
-function ProductPage () {
+// function ProductPage () {
 
-  const [selectedService, setSelectedService] = useState('');
+//   const [selectedService, setSelectedService] = useState('');
 
-  const handleServiceChange = (e) => {
-    setSelectedService(e.target.value);
-  };
+//   const handleServiceChange = (e) => {
+//     setSelectedService(e.target.value);
+//   };
 
 
-    return (
+//     return (
 
-        <>
+//         <>
          
       
-         <CustomSelect value={selectedService} onChange={handleServiceChange} />
-    </>
-    );
-};
+//          <CustomSelect value={selectedService} onChange={handleServiceChange} />
+//     </>
+//     );
+// };
 
-export default ProductPage;
+// export default ProductPage;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Layout from "@/components/Frontend/layout"
-import CustomSelect from '@/components/Frontend/customSelect';
+import Banner from '@/components/Frontend/banner';
 
 const Workers: React.FC = () => {
 
@@ -15,7 +15,7 @@ const Workers: React.FC = () => {
       <div className="mx-auto max-w-screen-xl">
        
 
-        <CustomSelect value={selectedService} onChange={handleServiceChange} />
+        <Banner value={selectedService} onChange={handleServiceChange} />
       </div>
     </Layout>
 
