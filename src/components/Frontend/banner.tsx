@@ -4,14 +4,26 @@ import React, { useState, ChangeEvent } from 'react';
 import { useRouter } from 'next/router';
 
 
+interface ServiceType {
+  id: number;
+  name: string;
+  price: number;
+}
+
+interface ServiceTypes {
+  [key: string]: ServiceType[];
+}
+
 
 
 export default function Banner() {
   
   const router = useRouter();
-  const [selectedService, setSelectedService] = useState('');
+  const [selectedService, setSelectedService] = useState<string>('');
   const [selectedTypeOfService, setSelectedTypeOfService] = useState('');
-  const [typesOfService, setTypesOfService] = useState([]);
+  const [typesOfService, setTypesOfService] = useState<ServiceType[]>([]);
+
+
 
   const serviceTypes = {
     1: [
@@ -40,11 +52,12 @@ export default function Banner() {
     6: [{ id: 18, name: 'Get a Quote', price: 0 }]
   };
 
-  const handleServiceChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const selectedValue = event.target.value;
-    setSelectedService(selectedValue);
-    setTypesOfService(serviceTypes[selectedValue]);
+      const handleServiceChange = (event: ChangeEvent<HTMLInputElement>) => {
+      const selectedValue: string = event.target.value;
+      setSelectedService(selectedValue);
+      setTypesOfService(serviceTypes[selectedValue]);
   };
+  
 
   const handleTypeOfServiceChange = (event: ChangeEvent<HTMLInputElement>) => {
     const selectedValue = event.target.value;
