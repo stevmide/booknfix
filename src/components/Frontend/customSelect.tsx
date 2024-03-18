@@ -119,11 +119,11 @@ function CustomSelect() {
   <div className="flex-1">
   <div className="">
       <Head>
-        <title>Book'n'Fix - Local Artisans On-Demand</title>
+        <title>Book&apos;n&apos;Fix - Local Artisans On-Demand</title>
         <meta name="description" content="Book reliable local artisans for any repair, installation, or maintenance project with Book'n'Fix. Effortless booking, expert service, 100% satisfaction guaranteed." />
       </Head>
       <div className="flex flex-col items-center mt-0 mb-2">
-        <h1 className="text-3xl font-bold text-center mb-4">Why choose Book'n'Fix?</h1>
+        <h1 className="text-3xl font-bold text-center mb-4">Why choose Book&apos;n&apos;Fix?</h1>
         <p className="text-gray-700 text-center max-w-sm"></p>
       </div>
       <h2 className="text-2xl font-semibold mb-4"></h2>
