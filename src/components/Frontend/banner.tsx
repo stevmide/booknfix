@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import React, { useState } from 'react'; 
+import React, { useState, ChangeEvent } from 'react'; 
 import { useRouter } from 'next/router';
 
 
@@ -40,13 +40,13 @@ export default function Banner() {
     6: [{ id: 18, name: 'Get a Quote', price: 0 }]
   };
 
-  const handleServiceChange = (event) => {
+  const handleServiceChange = (event: ChangeEvent<HTMLInputElement>) => {
     const selectedValue = event.target.value;
     setSelectedService(selectedValue);
     setTypesOfService(serviceTypes[selectedValue]);
   };
 
-  const handleTypeOfServiceChange = (event) => {
+  const handleTypeOfServiceChange = (event: ChangeEvent<HTMLInputElement>) => {
     const selectedValue = event.target.value;
     setSelectedTypeOfService(selectedValue);
   };
