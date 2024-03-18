@@ -65,7 +65,7 @@ export default function Testimonial() {
             </div>
 
             <p className="line-clamp-2 sm:line-clamp-none mt-4 text-gray-500">
-            Don't let plumbing woes dampen your day! Our expert plumbers tackle leaks, clogs, and drips, keeping your home running smoothly. book now, reliable service – 24/7!
+            Don&apos;t let plumbing woes dampen your day! Our expert plumbers tackle leaks, clogs, and drips, keeping your home running smoothly. book now, reliable service – 24/7!
             </p>
           </blockquote>
           <blockquote className="rounded-lg bg-gray-100 p-8">

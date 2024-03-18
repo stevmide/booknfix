@@ -95,7 +95,7 @@ function InfoForm() {
         
     <div className="">
       <Head>
-        <title>Book'n'Fix - Local Artisans On-Demand</title>
+        <title>Book&apos;n&apos;fix - Local Artisans On-Demand</title>
         <meta name="description" content="Book reliable local artisans for any repair, installation, or maintenance project with Book'n'Fix. Effortless booking, expert service, 100% satisfaction guaranteed." />
       </Head>
       <div className="flex flex-col items-center mt-0 mb-2">
