@@ -1,11 +1,21 @@
+import React, { useState } from 'react';
 import Layout from "@/components/Frontend/layout"
-import Form from "@/components/Frontend/form"
+import CustomSelect from '@/components/Frontend/customSelect';
 
 const Workers: React.FC = () => {
+
+  const [selectedService, setSelectedService] = useState('');
+
+  const handleServiceChange = (e) => {
+    setSelectedService(e.target.value);
+  };
+  
   return (
     <Layout>
       <div className="mx-auto max-w-screen-xl">
-        <Form />
+       
+
+        <CustomSelect value={selectedService} onChange={handleServiceChange} />
       </div>
     </Layout>
 
