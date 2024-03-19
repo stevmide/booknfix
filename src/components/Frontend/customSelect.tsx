@@ -1,16 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Image from "next/image";
 
+interface ServiceType {
+  id: number;
+  name: string;
+  price: number;
+}
+
+interface ServiceTypes {
+  [key: string]: ServiceType[];
+}
+
 function CustomSelect() {
-
   const router = useRouter();
-  const [selectedService, setSelectedService] = useState('');
+  const [selectedService, setSelectedService] = useState<string>('');
   const [selectedTypeOfService, setSelectedTypeOfService] = useState('');
-  const [typesOfService, setTypesOfService] = useState([]);
+  const [typesOfService, setTypesOfService] = useState<ServiceType[]>([]);
 
-  const serviceTypes = {
+  const serviceTypes: ServiceTypes = {
     1: [
       { id: 1, name: 'Normal Wash - Car', price: 1500 },
       { id: 2, name: 'Full Wash - Car', price: 2000 },
@@ -30,21 +39,23 @@ function CustomSelect() {
       { id: 12, name: 'Water Leaks', price: 2000 },
       { id: 13, name: 'Drain Repair', price: 2000 },
       { id: 14, name: 'Fixture Installation', price: 2000 },
-      { id: 15, name: 'Other Options'}
+      { id: 15, name: 'Other Options', price: 0}
     ],
     4: [{ id: 16, name: 'Get a Quote', price: 0 }],
     5: [{ id: 17, name: 'Get a Quote', price: 0 }],
     6: [{ id: 18, name: 'Get a Quote', price: 0 }]
   };
 
-  const handleServiceChange = (event) => {
-    const selectedValue = event.target.value;
+  const handleServiceChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const selectedValue: string = event.target.value;
     setSelectedService(selectedValue);
-    setTypesOfService(serviceTypes[selectedValue]);
+    if (serviceTypes[selectedValue]) {
+      setTypesOfService(serviceTypes[selectedValue]);
+    }
   };
 
-  const handleTypeOfServiceChange = (event) => {
-    const selectedValue = event.target.value;
+  const handleTypeOfServiceChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const selectedValue: string = event.target.value;
     setSelectedTypeOfService(selectedValue);
   };
 

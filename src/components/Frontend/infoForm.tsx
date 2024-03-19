@@ -10,7 +10,7 @@ function InfoForm() {
   const [info, setInfo] = useState('');
   const router = useRouter();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Simulate sending data to server (replace with your API call)
@@ -71,8 +71,8 @@ function InfoForm() {
         <div className="flex flex-col">
         <label htmlFor="message" className="text-gray-700 mb-2">Type of Service</label>
         <textarea id="info" 
-            rows="4" 
-            class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500" 
+            rows={4} 
+            className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500" 
             placeholder="Please give us details of the service you require..."
             value={info}
             onChange={(e) => setInfo(e.target.value)}
@@ -125,4 +125,4 @@ function InfoForm() {
 }
 
 
-export default infoForm
+export default InfoForm

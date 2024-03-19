@@ -25,7 +25,7 @@ export default function Banner() {
 
 
 
-  const serviceTypes = {
+  const serviceTypes: ServiceTypes = {
     1: [
       { id: 1, name: 'Normal Wash - Car', price: 1500 },
       { id: 2, name: 'Full Wash - Car', price: 2000 },
@@ -45,22 +45,24 @@ export default function Banner() {
       { id: 12, name: 'Water Leaks', price: 2000 },
       { id: 13, name: 'Drain Repair', price: 2000 },
       { id: 14, name: 'Fixture Installation', price: 2000 },
-      { id: 15, name: 'Other Options'}
+      { id: 15, name: 'Other Options', price: 0}
     ],
     4: [{ id: 16, name: 'Get a Quote', price: 0 }],
     5: [{ id: 17, name: 'Get a Quote', price: 0 }],
     6: [{ id: 18, name: 'Get a Quote', price: 0 }]
   };
 
-      const handleServiceChange = (event: ChangeEvent<HTMLInputElement>) => {
-      const selectedValue: string = event.target.value;
-      setSelectedService(selectedValue);
+  const handleServiceChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const selectedValue: string = event.target.value;
+    setSelectedService(selectedValue);
+    if (serviceTypes[selectedValue]) {
       setTypesOfService(serviceTypes[selectedValue]);
+    }
   };
   
 
-  const handleTypeOfServiceChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const selectedValue = event.target.value;
+  const handleTypeOfServiceChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const selectedValue: string = event.target.value;
     setSelectedTypeOfService(selectedValue);
   };
 
@@ -128,11 +130,11 @@ export default function Banner() {
                 Type of service
               </label>
               <select
-                 id="location"
-                 className="appearance-none block bg-white border border-gray-400 rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500 w-full mb-4"
-                 value={selectedTypeOfService}
-                 onChange={handleTypeOfServiceChange}
-              >
+              id="location"
+              className="appearance-none block bg-white border border-gray-400 rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500 w-full mb-4"
+              value={selectedTypeOfService}
+              onChange={handleTypeOfServiceChange}
+            >
                 <option value="">Please select type of service</option>
                 {typesOfService.map((type) => (
                   <option key={type.id} value={type.id}>
