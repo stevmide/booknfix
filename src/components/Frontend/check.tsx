@@ -98,7 +98,7 @@ const CheckoutPage: React.FC = () => {
         <p className="text-xl font-medium">Payment Details</p>
         <p className="text-gray-400">Complete your order by providing your payment details.</p>
         <div className="">
-          <label for="email" className="mt-4 mb-2 block text-sm font-medium">Email</label>
+          <label htmlFor="email" className="mt-4 mb-2 block text-sm font-medium">Email</label>
           <div className="relative">
             <input type="text" id="email" name="email" className="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="your.email@gmail.com" />
             <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
@@ -107,7 +107,7 @@ const CheckoutPage: React.FC = () => {
               </svg>
             </div>
           </div>
-          <label for="card-holder" className="mt-4 mb-2 block text-sm font-medium">Card Holder</label>
+          <label htmlFor="card-holder" className="mt-4 mb-2 block text-sm font-medium">Card Holder</label>
           <div className="relative">
             <input type="text" id="card-holder" name="card-holder" className="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm uppercase shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="Your full name here" />
             <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
@@ -116,7 +116,7 @@ const CheckoutPage: React.FC = () => {
               </svg>
             </div>
           </div>
-          <label for="card-no" className="mt-4 mb-2 block text-sm font-medium">Card Details</label>
+          <label htmlFor="card-no" className="mt-4 mb-2 block text-sm font-medium">Card Details</label>
           <div className="flex">
             <div className="relative w-7/12 flex-shrink-0">
               <input type="text" id="card-no" name="card-no" className="w-full rounded-md border border-gray-200 px-2 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="xxxx-xxxx-xxxx-xxxx" />
@@ -130,7 +130,7 @@ const CheckoutPage: React.FC = () => {
             <input type="text" name="credit-expiry" className="w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="MM/YY" />
             <input type="text" name="credit-cvc" className="w-1/6 flex-shrink-0 rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="CVC" />
           </div>
-          <label for="billing-address" className="mt-4 mb-2 block text-sm font-medium">Billing Address</label>
+          <label htmlFor="billing-address" className="mt-4 mb-2 block text-sm font-medium">Billing Address</label>
           <div className="flex flex-col sm:flex-row">
             <div className="relative flex-shrink-0 sm:w-7/12">
               <input type="text" id="billing-address" name="billing-address" className="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="Street Address" />
@@ -138,7 +138,7 @@ const CheckoutPage: React.FC = () => {
                 <img className="h-4 w-4 object-contain" src="https://flagpack.xyz/_nuxt/4c829b6c0131de7162790d2f897a90fd.svg" alt="" />
               </div>
             </div>
-            <select type="text" name="billing-state" className="w-full rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500">
+            <select name="billing-state" className="w-full rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500">
               <option value="State">State</option>
             </select>
             <input type="text" name="billing-zip" className="flex-shrink-0 rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm outline-none sm:w-1/6 focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="ZIP" />
