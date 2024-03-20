@@ -22,7 +22,7 @@ export default function Katering() {
 
           <div className="mt-4 md:mt-8">
             <Link
-              href="./reserva"
+              href="./workers"
               className="inline-block rounded bg-top-blue px-12 py-3 text-sm font-medium text-white transition hover:bg-green-700"
             >
               Find a worker
