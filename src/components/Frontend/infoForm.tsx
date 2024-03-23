@@ -92,7 +92,7 @@ function InfoForm() {
           </button>
         </form>
 
-        {submitted && <div className="text-xl text-green-600 mt-4">Submitted successfully! We&aposll get in touch with you.</div>}
+        {submitted && <div className="text-xl text-green-600 mt-4">Submitted successfully! We will get in touch with you.</div>}
       </div>
 
       <div className="lg:w-1/2 lg:pl-8 mt-8 lg:mt-0">
