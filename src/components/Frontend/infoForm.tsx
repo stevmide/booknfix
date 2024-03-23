@@ -92,13 +92,13 @@ function InfoForm() {
           </button>
         </form>
 
-        {submitted && <div className="text-xl text-green-600 mt-4">Submitted successfully! We'll get in touch with you.</div>}
+        {submitted && <div className="text-xl text-green-600 mt-4">Submitted successfully! We&aposll get in touch with you.</div>}
       </div>
 
       <div className="lg:w-1/2 lg:pl-8 mt-8 lg:mt-0">
         <Head>
-          <title>Book'n'Fix - Local Artisans On-Demand</title>
-          <meta name="description" content="Book reliable local artisans for any repair, installation, or maintenance project with Book'n'Fix. Effortless booking, expert service, 100% satisfaction guaranteed." />
+          <title>Book&aposn&aposFix - Local Artisans On-Demand</title>
+          <meta name="description" content="Book reliable local artisans for any repair, installation, or maintenance project with Book&aposn&aposFix. Effortless booking, expert service, 100% satisfaction guaranteed." />
         </Head>
         <div className="flex flex-col items-center">
           <h1 className="text-3xl font-bold text-center mb-4">Here to serve you</h1>

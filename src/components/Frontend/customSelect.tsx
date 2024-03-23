@@ -79,6 +79,7 @@ function CustomSelect() {
   return (
 
     <div>
+    
        <h1 className="text-top-grey text-3xl font-bold mt-6 text-center">Find a Local Professional</h1>      
       <div className="mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:px-4">
         <div className="max-w-xl mb-8 sm:mb-0 sm:mr-4 lg:mr-12 w-full">
