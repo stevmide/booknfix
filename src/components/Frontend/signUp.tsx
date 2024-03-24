@@ -8,17 +8,17 @@ function signIn() {
   <div className="flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md">
     <div className="p-4 py-6 text-white bg-top-blue md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
       <div className="my-3 text-4xl font-bold tracking-wider text-center">
-        <a href="#">Book'N'Fix</a>
+        <a href="#">Book&aposN&aposFix</a>
       </div>
       <p className="mt-6 font-normal text-center text-whte md:mt-0">
       In simple steps, register, login and book for a local professional near you.
       </p>
       <p className="flex flex-col items-center justify-center mt-10 text-center">
         <span>Already have an account </span>
-        <a href="/login" className="underline"> Log In</a>
+        <Link href="/login" className="underline"> Log In</Link>
       </p>
       <p className="mt-6 text-sm text-center text-gray-300">
-      <a href="/" className="underline"></a>Back to <a href="/" className="underline">Home</a>
+      <Link href="/" className="underline"></Link>Back to <Link href="/" className="underline">Home</Link>
       </p>
     </div>
     <div className="p-5 bg-white md:flex-1">
