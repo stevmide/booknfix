@@ -69,7 +69,7 @@ function CustomSelect() {
     if (selectedType) {
       router.push({
         pathname: '/checkout',
-        query: { service: selectedService, type: selectedType.name, price: selectedType.price }
+        query: { service: selectedService, name: selectedType.name, price: selectedType.price }
       });
     }
     };
