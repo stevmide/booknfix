@@ -65,7 +65,7 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden flex-1 items-center justify-end gap-4 sm:flex">
-            <Link href="/workers" passHref>
+            <Link href="login" passHref>
               <span className="rounded-lg bg-top-blue transition hover:bg-mid-blue px-5 py-2 text-sm font-medium text-white">
                 Sign In
               </span>
@@ -143,7 +143,7 @@ export default function Navbar() {
                     </li>
 
                     <li>
-                    <Link href="/workers" passHref>
+                    <Link href="/login" passHref>
                       <span className="rounded-lg bg-top-blue transition hover:bg-mid-blue px-5 py-2 text-sm font-medium text-white">
                         Sign In
                       </span>
