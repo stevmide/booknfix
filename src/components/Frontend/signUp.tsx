@@ -17,7 +17,7 @@ function signIn() {
         <span>Already have an account </span>
         <Link href="/login" className="underline"> Log In</Link>
       </p>
-      <p className="mt-6 text-sm text-center text-gray-300">
+      <p className="mt-6 text-sm text-center text-white">
       <Link href="/" className="underline"></Link>Back to <Link href="/" className="underline">Home</Link>
       </p>
     </div>
