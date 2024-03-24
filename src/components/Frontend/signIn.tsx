@@ -14,7 +14,7 @@ function signIn() {
       Power through your workday, then unwind with ease. Our simple steps connect you to reliable local home service experts, freeing you to focus on what matters most!
       </p>
       <p className="flex flex-col items-center justify-center mt-10 text-center">
-        <span>Don't have an account?</span>
+        <span>Don&apost have an account?</span>
         <Link href="/register" className="underline">Get Started!</Link>
       </p>
       <p className="mt-6 text-sm text-center text-white">
