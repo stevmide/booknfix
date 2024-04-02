@@ -1,8 +1,37 @@
 import React from 'react'
+import { useState } from 'react';
 import Link from 'next/link';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "./firebase"
 
 
-function signIn() {
+
+
+
+
+function SignIn() {
+
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const signin = (e: React.FormEvent) => {
+    e.preventDefault();
+
+
+    signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          
+            console.log(userCredential)
+        }).catch((error) => {
+            console.log(error)
+        })
+       
+}
+
+   
+  
+
   return (
     <div className="flex items-center min-h-screen p-4 bg-gray-100 lg:justify-center">
   <div className="flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md">
@@ -23,12 +52,15 @@ function signIn() {
     </div>
     <div className="p-5 bg-white md:flex-1">
       <h3 className="my-4 text-2xl font-semibold text-gray-700">Account Login</h3>
-      <form action="#" className="flex flex-col space-y-5">
+      <form onSubmit ={signin} action="#" className="flex flex-col space-y-5">
         <div className="flex flex-col space-y-1">
           <label htmlFor="email" className="text-sm font-semibold text-gray-500">Email address</label>
           <input
             type="email"
             id="email"
+            onChange={(e) => setEmail(e.target.value)}
+            autoComplete="email"
+            required            
             autoFocus
             className="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
           />
@@ -41,6 +73,10 @@ function signIn() {
           <input
             type="password"
             id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            autoComplete="current-password"
+            required            
             className="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
           />
         </div>
@@ -113,4 +149,4 @@ function signIn() {
   )
 }
 
-export default signIn
+export default SignIn

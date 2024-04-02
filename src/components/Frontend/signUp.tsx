@@ -1,8 +1,28 @@
 import React from 'react'
 import Link from 'next/link';
+import { useState } from 'react';
+import { auth } from './firebase';
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
+function SignUp() {
 
-function signIn() {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed up 
+      const user = userCredential.user;
+      console.log("User signed up successfully!");
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // ..
+    });
+  
+  
   return (
     <div className="flex items-center min-h-screen p-4 bg-gray-100 lg:justify-center">
   <div className="flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md">
@@ -29,6 +49,10 @@ function signIn() {
           <input
             type="email"
             id="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
             autoFocus
             className="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
           />
@@ -41,6 +65,10 @@ function signIn() {
           <input
             type="password"
             id="password"
+            name="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
             className="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
           />
         </div>
@@ -113,4 +141,4 @@ function signIn() {
   )
 }
 
-export default signIn
+export default SignUp

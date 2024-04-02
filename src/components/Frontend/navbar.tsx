@@ -52,9 +52,9 @@ export default function Navbar() {
               </span>
             </Link>
             
-            <Link href="/contacto" passHref>
+            <Link href="/contact" passHref>
               <span
-                className={`${router.pathname === "/contacto"
+                className={`${router.pathname === "/contact"
                   ? "text-top-blue"
                   : "text-gray-500 hover:text-gray-900 transition"
                   }  text-base`}
@@ -129,10 +129,10 @@ export default function Navbar() {
                     </li>
                       
                     <li>
-                      <Link href="/contacto" passHref>
+                      <Link href="/contact" passHref>
                         <span
                           onClick={() => setMenuOpen(false)}
-                          className={`${router.pathname === "/contacto"
+                          className={`${router.pathname === "/contact"
                             ? "text-top-blue"
                             : "text-gray-500 hover:text-gray-900 transition "
                             } text-base`}
